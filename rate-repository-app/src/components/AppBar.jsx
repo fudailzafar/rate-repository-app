@@ -1,7 +1,7 @@
 import { View, StyleSheet, Text, ScrollView, Pressable } from "react-native";
 import { Link } from "react-router-native";
 import Constants from "expo-constants";
-import { useQuery, useApolloClient } from "@apollo/client";
+import { useQuery, useApolloClient } from "@apollo/client/react";
 import { useAuthStorage } from "../hooks/useAuthStorage";
 import { ME } from "../graphql/queries";
 import theme from "./theme";

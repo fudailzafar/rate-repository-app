@@ -1,42 +1,66 @@
-# Part 10 - React Native
+﻿# <img src="https://github.com/fudailzafar/hexcode/blob/main/assets/images/icon.png" height="32"> HexCode
 
-All of the exercises listed below are done in [Rate Repository App](rate-repository-app)
+HexCode is a color-palette generator mobile app for design inspiration, inspired by the Coolors tool. HexCode generates a palette of 5 random colors, which can be randomised based on the user's preference. The app functions on the frontend, and uses a randomiser function to randomise the colors on the screen.
 
-Part a - Introduction to React Native
+# Tech Stack
 
-- 10.1 initializing the application
-- 10.2 setting up the ESLint
+### Frameworks, Tools & Languages
 
-Part b - React Native basics
+- React Native
+- Expo
+- JavaScript/TypeScript
 
-- 10.3 the reviewed repositories list
-- 10.4 the app bar
-- 10.5 polished reviewed repositories list
-- 10.6 the sign-in view
-- 10.7 scrollable app bar
-- 10.8 the sign-in form
-- 10.9 validating the sign-in form
-- 10.10 a platform-specific font
+### Dependencies
 
-Part c - Communicating with server
+- `expo-router` File-based Routing & Navigation
+- `expo-linear-gradient` Gradient Backgrounds
+- `expo-font` Google Fonts
+- `react-native-reanimated` App Animations
+- `react-native-gesture-handler` Gesture Handling
+- `react-native-view-shot` Exporting Palette as Image
+- `react-native-share` Sharing Palette
 
-- 10.11 fetching repositories with Apollo Client
-- 10.12 environment variables
-- 10.13 the sign in form mutation
-- 10.14 storing the access token step1
-- 10.15 storing the access token step2
-- 10.16 sign out
+# App Screenshots
 
-Part d - Testing and extending our application
+<div>
+<img src="https://github.com/fudailzafar/hexcode/blob/main/assets/screenshots/AppScreenshotLanding.png" height="400">
+<img src="https://github.com/fudailzafar/hexcode/blob/main/assets/screenshots/AppScreenshotGenerator.png" height="400">
+<img src="https://github.com/fudailzafar/hexcode/blob/main/assets/screenshots/AppScreenshotModal.png" height="400">
+<img src="https://github.com/fudailzafar/hexcode/blob/main/assets/screenshots/AppScreenshotExport.png" height="400">
+</div>
 
-- 10.17 testing the reviewed repositories list
-- 10.18 testing the sign in form
-- 10.19 the single repository view
-- 10.20 repository's review list
-- 10:21 the review form
-- 10.22 the sign up form
-- 10.23 sorting the reviewed repositories list
-- 10.24 filtering the reviewed repositories list
-- 10.25 the user's reviews view
-- 10.26 review actions
-- 10.27 infinite scrolling for the repository's reviews list
+# Run Locally
+
+### Pre-requisites
+
+- Node.js
+- Expo CLI
+- Android/iOS Emulator (A Physical Device works as well)
+
+### Installation
+
+1. Clone this Repository, then change directory to the hexcode directory.
+
+```
+git clone https://github.com/fudailzafar/hexcode.git
+```
+
+```
+cd hexcode
+```
+
+2. Install Dependencies
+
+```
+npm install
+```
+
+3. Build a prebuild of the app, and then run the app.
+
+```
+npx expo prebuild
+```
+
+```
+npx expo run:ios
+```

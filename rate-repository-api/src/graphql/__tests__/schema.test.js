@@ -1,6 +1,6 @@
 import { ApolloServer } from 'apollo-server-koa';
 
-import { typeDefs, resolvers } from '../schema.js';
+import { typeDefs, resolvers } from '../schema';
 
 describe('createSchema', () => {
   it('creates schema without errors', () => {

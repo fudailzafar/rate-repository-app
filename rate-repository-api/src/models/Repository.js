@@ -1,5 +1,5 @@
-import BaseModel from './BaseModel.js';
-import knex from '../utils/knex.js';
+import BaseModel from './BaseModel';
+import knex from '../utils/knex';
 
 class Repository extends BaseModel {
   static get idColumn() {

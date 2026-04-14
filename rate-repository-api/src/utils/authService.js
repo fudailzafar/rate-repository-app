@@ -1,8 +1,8 @@
 import { AuthenticationError } from 'apollo-server';
 
-import { ACCESS_TOKEN_EXPIRATION_TIME } from '../config.js';
-import signJwt from './signJwt.js';
-import verifyJwt from './verifyJwt.js';
+import { ACCESS_TOKEN_EXPIRATION_TIME } from '../config';
+import signJwt from './signJwt';
+import verifyJwt from './verifyJwt';
 
 const subject = 'accessToken';
 

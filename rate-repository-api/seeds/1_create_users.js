@@ -12,7 +12,7 @@ const commonColumns = {
   password,
 };
 
-export const seed = async (knex) => {
+exports.seed = async (knex) => {
   await knex('users').del();
 
   await knex('users').insert([

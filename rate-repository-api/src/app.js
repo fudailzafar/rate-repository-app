@@ -5,10 +5,10 @@ import bodyParser from 'koa-bodyparser';
 import Router from 'koa-router';
 import through from 'through2';
 
-import { ApplicationError, NotFoundError } from './errors.js';
-import createDataLoaders from './utils/createDataLoaders.js';
-import logger from './utils/logger.js';
-import api from './api/index.js';
+import { ApplicationError, NotFoundError } from './errors';
+import createDataLoaders from './utils/createDataLoaders';
+import logger from './utils/logger';
+import api from './api';
 
 const logStream = through((chunk) => {
   logger.info(chunk.toString());

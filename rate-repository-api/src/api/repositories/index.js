@@ -1,6 +1,6 @@
 import Router from 'koa-router';
 
-import getRepositories from './getRepositories.js';
+import getRepositories from './getRepositories';
 
 const router = new Router();
 

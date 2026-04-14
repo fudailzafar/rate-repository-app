@@ -28,7 +28,7 @@ const createIdColumns = (userId, repositoryId) => ({
   repository_id: repositoryId,
 });
 
-export const seed = async (knex) => {
+exports.seed = async (knex) => {
   await knex('reviews').del();
 
   await knex('reviews').insert([

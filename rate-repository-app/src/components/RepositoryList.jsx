@@ -1,31 +1,49 @@
-import { FlatList, View, StyleSheet } from "react-native";
-import RepositoryItem from "./RepositoryItem";
+import { FlatList } from "react-native";
+import RepositoryItem from "./RepositoryItem/RepositoryItem";
+import OrderingSelector from "./OrderingSelector";
 import useRepositories from "../hooks/useRepositories";
+import SearchBar from "./SearchBar";
 
+export const RepositoryListContainer = ({
+  repositories,
+  repoRefetch,
+  onEndReach,
+}) => {
+  const repositoryNodes = repositories
+    ? repositories.edges.map((edge) => edge.node)
+    : [];
 
-const styles = StyleSheet.create({
-    separator: {
-        height: 10,
-    },
-});
-
-const ItemSeparator = () => <View style={styles.separator} />;
+  return (
+    <FlatList
+      data={repositoryNodes}
+      ListHeaderComponent={
+        <>
+          <SearchBar repoRefetch={repoRefetch} />
+          <OrderingSelector repoRefetch={repoRefetch} />
+        </>
+      }
+      ListHeaderComponentStyle={{ zIndex: 5 }}
+      renderItem={({ item }) => <RepositoryItem repository={item} />}
+      onEndReached={onEndReach}
+      onEndReachedThreshold={0.5}
+    />
+  );
+};
 
 const RepositoryList = () => {
-    const { repositories } = useRepositories();
+  const { repositories, refetch, fetchMore } = useRepositories();
 
-    // Get the nodes from the edges array
-    const repositoryNodes = repositories
-        ? repositories.edges.map((edge) => edge.node)
-        : [];
+  const onEndReach = () => {
+    fetchMore();
+  };
 
-    return (
-        <FlatList
-            data={repositoryNodes}
-            ItemSeparatorComponent={ItemSeparator}
-            renderItem={({ item }) => <RepositoryItem item={item} />}
-        />
-    );
+  return (
+    <RepositoryListContainer
+      repositories={repositories}
+      repoRefetch={refetch}
+      onEndReach={onEndReach}
+    />
+  );
 };
 
 export default RepositoryList;

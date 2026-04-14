@@ -1,4 +1,4 @@
-export function up(knex) {
+exports.up = function (knex) {
   return knex.schema.createTable('reviews', (table) => {
     table.text('id').primary();
     table.text('user_id').references('users.id').onDelete('cascade');
@@ -13,8 +13,8 @@ export function up(knex) {
 
     table.index(['user_id', 'repository_id']);
   });
-}
+};
 
-export function down(knex) {
+exports.down = function (knex) {
   return knex.schema.dropTableIfExists('reviews');
-}
+};

@@ -15,7 +15,7 @@ class AuthStorage {
   async setAccessToken(accessToken) {
     await AsyncStorage.setItem(
       `${this.namespace}:token`,
-      JSON.stringify(accessToken),
+      JSON.stringify(accessToken)
     );
   }
 

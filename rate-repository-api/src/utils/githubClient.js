@@ -1,14 +1,13 @@
 import LRUCache from 'lru-cache';
 import { ApolloError } from 'apollo-server';
-import lodash from 'lodash';
-const { pick, get } = lodash;
+import { pick, get } from 'lodash';
 import axios from 'axios';
 
 import {
   GITHUB_API_URL,
   GITHUB_CLIENT_ID,
   GITHUB_CLIENT_SECRET,
-} from '../config.js';
+} from '../config';
 
 const oneHour = 1000 * 60 * 60;
 

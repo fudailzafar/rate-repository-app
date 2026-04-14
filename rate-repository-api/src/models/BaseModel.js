@@ -1,6 +1,6 @@
 import { Model, QueryBuilder } from 'objection';
 
-import cursorPaginate from '../utils/pagination/cursorPaginate.js';
+import cursorPaginate from '../utils/pagination/cursorPaginate';
 
 export class BaseQueryBuilder extends QueryBuilder {
   cursorPaginate(options) {

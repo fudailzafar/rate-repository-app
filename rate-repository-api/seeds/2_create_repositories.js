@@ -11,7 +11,7 @@ const createColumns = (ownerName, repositoryName) => ({
   name: repositoryName,
 });
 
-export const seed = async (knex) => {
+exports.seed = async (knex) => {
   await knex('repositories').del();
 
   await knex('repositories').insert([

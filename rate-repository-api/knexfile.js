@@ -1,9 +1,8 @@
-import dotenv from 'dotenv';
-dotenv.config();
+require('dotenv').config();
 
 const FILENAME = process.env.DATABASE_FILENAME || 'database.sqlite';
 
-export default {
+module.exports = {
   client: 'sqlite3',
   connection: {
     filename: FILENAME,

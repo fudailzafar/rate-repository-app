@@ -4,7 +4,7 @@ import { setContext } from "@apollo/client/link/context";
 import { relayStylePagination } from "@apollo/client/utilities";
 
 const httpLink = createHttpLink({
-  uri: Constants.manifest.extra.env,
+  uri: Constants.expoConfig?.extra?.env,
 });
 
 const cache = new InMemoryCache({
